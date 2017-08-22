@@ -2,7 +2,9 @@ var postMessageDebugger = {
   init: function() {
     console.log("postMessageDebugger activated");
     addEventListener("message", function(event) {
-      console.log(document.title + " received '" + event.data + "'")
+      console.log('PostMessageDebugger: ' + document.title + ' received');
+      console.log('PostMessageDebugger: [Event origin]: ', event.origin);
+      console.log('PostMessageDebugger: [Event data] ', event.data);
     });
   }
 };
